@@ -33,9 +33,9 @@ The galleries are built from folders, previews will be generated when the page i
 
 <p><code>((your/gallery_folder|Your gallery Title))</code> <em>Path and title are separated with a pipe character |</em></p>
 
-<p><strong>Gallery with title and custom thumbnail size</strong></p>
+<!--<p><strong>Gallery with title and custom thumbnail size</strong></p>
 
-<p><code>((your/gallery_folder|Your gallery Title|200x200))</code> <em>The thumbnail size is in pixels (width x height)</em></p>
+<p><code>((your/gallery_folder|Your gallery Title|200x200))</code> <em>The thumbnail size is in pixels (width x height)</em></p>-->
 
 <h2>Template</h2>
 
@@ -43,7 +43,7 @@ The galleries are built from folders, previews will be generated when the page i
 
 <p>The file is well documented and should itself explain how the template works.</p>
 
-<h2>Lightbox</h2>
+<!--<h2>Lightbox</h2>
 
 <hr><p>If you like you can easily integrate lightbox-galleries into your site. Just download a lightbox script (for example <a href="http://fancyapps.com/fancybox/">fancyBox</a>) and set up the files as documented on the lightbox site or in the readme file. As default selector for the lightbox you can use <code>.gallery a</code>. For example with fancyBox the JS would look like this:</p>
 
@@ -52,13 +52,13 @@ The galleries are built from folders, previews will be generated when the page i
     $('.gallery a').fancybox();
   });
 &lt;/script&gt;
-</code></pre>
+</code></pre>-->
 
 <h2>Feedback</h2>
 
 <hr><p><strong>Report An Issue/Bug</strong></p>
 
-<p>Please report issues on the project’s <a href="https://github.com/jlis/ebGallery/issues">GitHub Issues</a> page.</p>
+<p>Please report issues on the project’s <a href="https://github.com/endaroza/WolfCmsZakEbGallery/issues">GitHub Issues</a> page.</p>
 
 <p><strong>Comments/Suggestions</strong></p>
 
@@ -68,4 +68,4 @@ The galleries are built from folders, previews will be generated when the page i
 
 <hr>
 
-<p>More on the project’s <a href="https://github.com/jlis/ebGallery">GitHub Issues</a> page.</p>
+<p>More on the project’s <a href="https://github.com/endaroza/WolfCmsZakEbGallery">GitHub Issues</a> page.</p>
