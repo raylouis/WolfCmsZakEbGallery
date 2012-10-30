@@ -1,0 +1,131 @@
+// Placeholders:
+//
+// ((gallery)) => Gallery content (titles and images)
+// ((title)) => Title of the gallery
+// ((image)) => URL of the image in full resolution
+// ((thumb)) => URL of teh thumbnail image
+// ((selectedimage)) => The currently selected image
+//
+/////////////////////////////////////////////////////
+
+
+// This is the outer gallery container in which the title and images are displayed
+/////////////////////////////////////////////////////
+###gallery_start###
+<script type="text/javascript">
+    function onSelectImage(selectedObject)
+    {
+        var selectedImage = selectedObject.getElementsByTagName("IMG")[0];
+        var imagePath = selectedImage.src;
+        var imageExt = imagePath.split('.').pop();
+        var bigImagePath = imagePath.replace("-thumb."+imageExt,"."+imageExt);
+        document.getElementById("selectedImage").src=bigImagePath;
+        document.getElementById("selectedImage").focus();
+    }
+    
+    function selectFirstElement()
+    {
+        var gallery = document.getElementById("eb_gallery");
+        var selectedObjects = gallery.getElementsByTagName("A");
+        onSelectImage(selectedObjects[0]);
+    }
+</script>
+<style type="text/css">
+    .selectedImageClass
+    {
+        width: 100%;
+        padding: 6px; 
+        margin: 0 5px 5px 0; 
+        border: 3px solid; 
+        background-color:grey;
+display: block;
+    margin-left: auto;
+    margin-right: auto
+   
+    }
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto*/
+    #selimg {
+width: 70%;
+margin-left:auto;
+        margin-right:auto;
+    }
+/*        
+*/
+
+    #scroll {
+        width:70%;
+        margin:100px auto;
+        background:#999;
+        border:2px solid #000;
+        overflow:auto;
+    }
+
+    #scroll ul {
+        float:left;
+        margin-right:-999em;
+        white-space:nowrap;
+        list-style:none;
+    }
+    #scroll li {
+        margin:15px;
+        text-align:center;
+        float:left;
+        display:inline;           
+    }
+    #scroll img {
+        border:0;
+        display:block;
+        border:1px solid #999;
+    }
+    #scroll a:active img, #scroll a:focus img, #scroll a:hover img {
+        border:1px solid #000;
+    }
+    #scroll a {
+        text-decoration:none;
+        font-weight:bold;
+        color:#000;
+    }
+    #scroll a:active, #scroll a:focus, #scroll a:hover {
+        color:#FFF;
+    }
+    #scroll span {
+        padding:5px 0 0;
+        display:block;
+    } 
+</style>
+<div id="eb_gallery" name="eb_gallery" class="gallery">
+
+        <div id="scroll">
+            <ul>
+                ((gallery))
+            </ul>
+        </div>
+
+        <div id="selimg">((selectedimage))</div>
+
+</div>
+<script type="text/javascript">
+    selectFirstElement();
+</script>    
+###gallery_end###
+
+
+// This is the wrapper for the title
+/////////////////////////////////////////////////////
+###title_start###
+<!--<h2 style="margin:20px 0 10px;">((title))</h2>-->
+###title_end###
+
+// HTML for a single image
+/////////////////////////////////////////////////////
+###image_start###
+<li><a href="#" rel="((title))" onclick="javascript:onSelectImage(this);"><img src="((thumb))" alt=""></a></li>
+###image_end###
+
+// This is the rendering zone for the selected image
+/////////////////////////////////////////////////////
+###selectedimage_start###
+<img class="selectedImageClass" id="selectedImage" name="selectedImage" src="((image))"/>
+###selectedimage_end###
